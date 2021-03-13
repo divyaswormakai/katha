@@ -37,6 +37,23 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyBgB-3JOW1hVK5LIahskVlJQ63dFk2owNQ',
+          authDomain: 'katha-7c60f.firebaseapp.com',
+          projectId: 'katha-7c60f',
+          storageBucket: 'katha-7c60f.appspot.com',
+          messagingSenderId: '698903656503',
+          appId: '1:698903656503:web:f203d7ce7f8ebf43bce7b2',
+          measurementId: 'G-PXNXZZYR9Q',
+        },
+        services: {
+          auth: true, // Just as example. Can be any other service.
+        },
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
