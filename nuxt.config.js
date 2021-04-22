@@ -51,9 +51,11 @@ export default {
         },
         services: {
           auth: true, // Just as example. Can be any other service.
+          firestore: true,
         },
       },
     ],
+    ['cookie-universal-nuxt', { alias: 'cookies' }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
