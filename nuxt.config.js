@@ -44,7 +44,7 @@ export default {
           apiKey: 'AIzaSyBgB-3JOW1hVK5LIahskVlJQ63dFk2owNQ',
           authDomain: 'katha-7c60f.firebaseapp.com',
           projectId: 'katha-7c60f',
-          storageBucket: 'katha-7c60f.appspot.com',
+          storageBucket: 'gs://katha-7c60f.appspot.com',
           messagingSenderId: '698903656503',
           appId: '1:698903656503:web:f203d7ce7f8ebf43bce7b2',
           measurementId: 'G-PXNXZZYR9Q',
@@ -52,6 +52,7 @@ export default {
         services: {
           auth: true, // Just as example. Can be any other service.
           firestore: true,
+          storage: true,
         },
       },
     ],
