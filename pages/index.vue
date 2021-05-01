@@ -2,7 +2,12 @@
   <v-container>
     <v-row align="start" no-gutters>
       <v-col :cols="3">
-        <v-card class="pa-2" outlined title> Hello {{ getName }} </v-card>
+        <v-card class="pa-2" outlined title>
+          Hello {{ getName }}
+          <nuxt-link :to="'/user/profile?id=' + user.userId"
+            >View Profile</nuxt-link
+          >
+        </v-card>
       </v-col>
       <v-col>
         <v-card class="pa-5" outlined title>
@@ -72,6 +77,7 @@ export default {
   async mounted() {
     if (this.$cookies.get('userDetails')) {
       this.user = this.$cookies.get('userDetails')
+      console.log(this.user)
       //  TODO: Welcome message
     } else {
       this.$router.push('/login')
@@ -110,7 +116,6 @@ export default {
       return storageRef.metadata.bucket + '/' + storageRef.metadata.fullPath
     },
     async getKathas() {
-      console.log('Fetching kathas')
       try {
         const snapshot = await this.$fire.firestore.collection('posts').get()
         const storage = await this.$fire.storage.ref()
